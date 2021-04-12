@@ -1,10 +1,11 @@
 # cloudflare-ips
-Dynamically maintains the whitelist of Cloudflare IP addresses for the specified Azure App Service. Optionally removes any specified deprecated/old IP restriction rules. 
+Dynamically maintains the whitelist of Cloudflare IP addresses for the specified Azure App Service. Optionally removes any specified deprecated/old IP restriction rules. Also attempts to make the same changes to the slot named 'staging' at the same time. 
 
 ## Usage
 .\AddCloudflareIPs.ps1 -ResourceGroupName your-resource-group-name -AppServiceName your-app-service-name
 
 ## Example
+```
 .\AddCloudflareIPs.ps1 -ResourceGroupName foogroup -AppServiceName barservice
 Loaded 15 Cloudflare IPv4 IPs
 Loaded 7 Cloudflare IPv6 IPs
@@ -34,3 +35,4 @@ Skipping IP 2a06:98c0::/29 (already exists)
 Skipping IP 2c0f:f248::/32 (already exists)
 Removing old IP address: 104.16.0.0/12
 All done
+```
