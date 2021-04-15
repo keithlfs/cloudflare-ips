@@ -1,4 +1,4 @@
-# cloudflare-ips
+# Maintain Azure App Service Cloudflare IP's
 Dynamically maintains the whitelist of Cloudflare IP addresses for the specified Azure App Service. Optionally removes any specified deprecated/old IP restriction rules. Also attempts to make the same changes to the slot named 'staging' at the same time. 
 
 ## Usage
